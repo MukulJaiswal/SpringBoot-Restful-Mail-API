@@ -2,8 +2,28 @@
 
 This Repository contains Restful Api for sending E-mail using `smtp.gmail.com` host
 
+## Download or clone this project as :
+
 ```
-Run Project : Download or clone -> Import project ->Run as Spring Boot Application
+Download or clone -> Import project ->Existing Maven Projects -> Run as Spring Boot project
+```
+## APIs Developed for  :
+
+```
+1.sendMail                   
+
+2.sendMailWithAttachment
+
+```
+## APIs are accessible at the link :
+
+* Send Mail without Attachment :
+```
+http://localhost:8080/send-mail
+```
+* Send Mail with Attachment :
+```
+http://localhost:8080/send-mail-attachment
 ```
 
 ## License
