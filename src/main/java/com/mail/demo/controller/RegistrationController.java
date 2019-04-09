@@ -38,7 +38,7 @@ public class RegistrationController {
 		 */
 		user.setFirstName("Mukul");
 		user.setLastName("Jaiswal");
-		user.setEmailAddress("mukul.jaiswal786@gmail.com");
+		user.setEmailAddress("mukul.jaiswal786@gmail.com"); //Receiver's email address
 
 		/*
 		 * Here we will call sendEmail() for Sending mail to the sender.
@@ -65,7 +65,7 @@ public class RegistrationController {
 		 */
 		user.setFirstName("Mukul");
 		user.setLastName("Jaiswal");
-		user.setEmailAddress("mukul.jaiswal786@gmail.com");
+		user.setEmailAddress("mukul.jaiswal786@gmail.com"); //Receiver's email address
 
 		/*
 		 * Here we will call sendEmailWithAttachment() for Sending mail to the sender

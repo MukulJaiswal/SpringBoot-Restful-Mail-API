@@ -4,6 +4,7 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
@@ -53,8 +54,8 @@ public class MailService {
 		 */
 
 		SimpleMailMessage mail = new SimpleMailMessage();
+		
 		mail.setTo(user.getEmailAddress());
-		mail.setFrom("mukul.jaiswal786@gmail.com");
 		mail.setSubject("Testing Mail API");
 		mail.setText("Hurray ! You have done that dude...");
 
@@ -65,7 +66,7 @@ public class MailService {
 	}
 
 	/**
-	 * This fucntion is used to send mail that contains a attachment.
+	 * This function is used to send mail that contains a attachment.
 	 * 
 	 * @param user
 	 * @throws MailException
@@ -81,8 +82,9 @@ public class MailService {
 		helper.setSubject("Testing Mail API with Attachment");
 		helper.setText("Please find the attached document below.");
 
-		FileSystemResource file = new FileSystemResource("/home/rockhard/Desktop/Registration.pdf");
-		helper.addAttachment(file.getFilename(), file);
+		
+		ClassPathResource classPathResource = new ClassPathResource("Attachment.pdf");
+		helper.addAttachment(classPathResource.getFilename(), classPathResource);
 
 		javaMailSender.send(message);
 	}
